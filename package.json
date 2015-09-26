@@ -2,6 +2,7 @@
   "name": "nwex",
   "version": "0.0.1",
   "description": "NW.js + Express boilerplate",
+  "main": "index.html",
   "scripts": {
     "test": "mocha"
   },
