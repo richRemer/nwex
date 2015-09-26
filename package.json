@@ -5,6 +5,9 @@
   "scripts": {
     "test": "mocha"
   },
+  "dependencies": {
+    "nw": "^0.12"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/richRemer/nwex.git"
