@@ -11,6 +11,14 @@
     "nw": "^0.12",
     "express": "^4"
   },
+  "devDependencies": {
+    "browserify": "^11",
+    "glob": "^5",
+    "gulp": "^3",
+    "gulp-rename": "^1",
+    "event-stream": "^3",
+    "vinyl-source-stream": "^1"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/richRemer/nwex.git"
