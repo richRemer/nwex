@@ -4,8 +4,10 @@ var http = require("http"),
     server;
 
 app.use(express.static("static"));
-server = http.createServer(app);
-module.exports = server;
+app.use(express.static("build"));
 
+server = http.createServer(app);
+
+module.exports = server;
 if (!module.parent) server.listen(4042);
 
