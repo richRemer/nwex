@@ -19,6 +19,9 @@
     "event-stream": "^3",
     "vinyl-source-stream": "^1"
   },
+  "browserify": {
+    "insertGlobals": true
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/richRemer/nwex.git"
