@@ -1,58 +1,46 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic);
+@import "fonts";
+@import "colors";
+@import "reset";
+@import "metrics";
+@import "util";
 
-html, body, fieldset {
-    border: 0 none;
-    margin: 0;
-    padding: 0;
+body, select {
+    font: $font-default;
 }
 
-body, button, select, input, textarea {
-    font-family: Lato, sans-serif;
-    font-weight: 400;
+button {
+    font: $font-strong;
 }
 
-button, select { font-weight: 700; }
-input, textarea { font-weight: 300; }
-
-label, button, select, input, textarea {
-    font-size: 1rem;
-    padding: 0.25rem;
-}
-
-
-fieldset + fieldset {
-    margin-top: 1rem;
+input, textarea {
+    font: $font-weak;
 }
 
 body {
-    background-color: rgb(160,192,128);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: 0;
+    @include abs(0,0,0,0);
+    background-color: $primary;
 }
 
 form {
-    background-color: rgb(229,240,217);
-    border: 0.25rem solid rgb(91,129,52);
-    border-radius: 1rem;
-    padding: 1rem;
+    background-color: $primary-x-light;
+    border: $border-thick solid $primary-x-dark;
+    border-radius: $rounded-full;
+    padding: $gutter-size;
 
     h3 {
-        background-color: rgb(91,129,52);
-        color: rgb(229,240,217);
-        margin: -1rem -1rem 1rem;
-        padding: 0.25rem;
+        @include gutter-title();
+        background-color: $primary-x-dark;
+        color: $primary-x-light;
+        padding: $padding-light;
         text-align: center;
     }
 }
 
 button {
-    background-color: rgb(157,83,109);
-    border: 0.1rem solid rgb(126,51,77);
-    border-radius: 0.25rem;
-    color: rgb(237,214,222);
+    background-color: $complement-dark;
+    border: $border-regular solid $complement-x-dark;
+    border-radius: $rounded-detail;
+    color: $complement-x-light;
 }
 
 #server {

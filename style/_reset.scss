@@ -1,0 +1,15 @@
+html, body, fieldset {
+    border: 0 none;
+    margin: 0;
+    padding: 0;
+}
+
+label, button, select, input, textarea {
+    font-size: inherit;
+    padding: 0.25rem;
+}
+
+fieldset + fieldset {
+    margin-top: 1rem;
+}
+
