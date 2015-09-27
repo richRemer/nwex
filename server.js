@@ -1,13 +1,19 @@
 var http = require("http"),
     express = require("express"),
-    app = express(),
     server;
 
-app.use(express.static("static"));
-app.use(express.static("build"));
+/**
+ * Create application server.
+ */
+function createServer() {
+    var app = express();
 
-server = http.createServer(app);
+    app.use(express.static("static"));
+    app.use(express.static("build"));
 
-module.exports = server;
-if (!module.parent) server.listen(4042);
+    return http.createServer(app);
+}
+
+module.exports = createServer;
+if (!module.parent) createServer().listen(4042);
 

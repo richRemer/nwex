@@ -3,9 +3,24 @@
     <head>
         <title>Connecting to application server</title>
         <script src="desktop.js"></script>
+        <script src="static/script/lib/knockout.js"></script>
+        <script src="static/script/lib/knockout-es5.js"></script>
         <link rel="stylesheet" type="text/css" href="build/style/nwex.css">
     </head>
-    <body>
-        <p>Connecting to application server</p>
+    <body id="server">
+        <form>
+            <h3>Server Setup</h3>
+            <fieldset>
+                <label for="server-host">Server</label>
+                <input id="server-host" type="text" data-bind="value:host">
+
+                <label for="server-port">Port</label>
+                <input id="server-port" type="text" data-bind="value:port">
+            </fieldset>
+            <fieldset>
+                <button type="button" data-bind="click:connect">Connect</button>
+                <button type="button" data-bind="click:start">Start</button>
+            </fieldset>
+        </form>
     </body>
 </html>

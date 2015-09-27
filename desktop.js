@@ -1,12 +1,6 @@
-var http = require("http");
- 
-function redirect() {
-    if (window.location.href.indexOf("localhost") < 0) {
-        window.location = "http://localhost:4042/";
-    }
-}
+var ko = require("knockout-es5"),
+    NwexServer = require("./lib/nwex-server");
 
-http.get({host: "localhost", port: 4042}, redirect)
-.on("error", function(err) {
-    require("./server").listen(4042, redirect);    
+document.addEventListener("DOMContentLoaded", function() {
+    ko.applyBindings(new NwexServer(), document.getElementById("server"));
 });
