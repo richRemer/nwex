@@ -1,8 +1,70 @@
-html, body {
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic);
+
+html, body, fieldset {
+    border: 0 none;
     margin: 0;
     padding: 0;
 }
 
+body, button, select, input, textarea {
+    font-family: Lato, sans-serif;
+    font-weight: 400;
+}
+
+button, select { font-weight: 700; }
+input, textarea { font-weight: 300; }
+
+label, button, select, input, textarea {
+    font-size: 1rem;
+    padding: 0.25rem;
+}
+
+
+fieldset + fieldset {
+    margin-top: 1rem;
+}
+
 body {
     background-color: rgb(160,192,128);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+form {
+    background-color: rgb(229,240,217);
+    border: 0.25rem solid rgb(91,129,52);
+    border-radius: 1rem;
+    padding: 1rem;
+
+    h3 {
+        background-color: rgb(91,129,52);
+        color: rgb(229,240,217);
+        margin: -1rem -1rem 1rem;
+        padding: 0.25rem;
+        text-align: center;
+    }
+}
+
+button {
+    background-color: rgb(157,83,109);
+    border: 0.1rem solid rgb(126,51,77);
+    border-radius: 0.25rem;
+    color: rgb(237,214,222);
+}
+
+#server {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#server-host {
+    width: 12rem;
+}
+
+#server-port {
+    width: 4rem;
 }
