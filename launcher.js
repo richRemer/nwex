@@ -1,5 +1,4 @@
-var ko = require("knockout-es5"),
-    browser = require("./lib/nwex-browser-model"),
+var browser = require("./lib/nwex-browser-model"),
     NwexServerBase = require("./lib/nwex-server");
 
 document.addEventListener("DOMContentLoaded", function() {
