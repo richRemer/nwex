@@ -16,6 +16,8 @@
     "glob": "^5",
     "gulp": "^3",
     "gulp-rename": "^1",
+    "gulp-sass": "^3",
+    "gulp-sourcemaps": "^1",
     "event-stream": "^3",
     "vinyl-source-stream": "^1"
   },

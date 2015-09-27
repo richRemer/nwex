@@ -1,11 +1,13 @@
 var gulp = require("gulp"),
-    source = require("vinyl-source-stream"),
     rename = require("gulp-rename"),
+    source = require("vinyl-source-stream"),
+    sass = require("gulp-sass"),
     browserify = require("browserify"),
+    sourcemaps = require("gulp-sourcemaps"),
     glob = require("glob"),
     es = require("event-stream");
 
-gulp.task("default", function(done) {
+gulp.task("script", function(done) {
     glob("./script/*.js", function(err, files) {
         if (err) done(err);
         else es.merge(files.map(function(entry) {
@@ -17,3 +19,13 @@ gulp.task("default", function(done) {
         })).on("end", done);
     });
 });
+
+gulp.task("style", function() {
+    gulp.src("./style/*.scss")
+        .pipe(sourcemaps.init())
+        .pipe(sass())
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest("./build/style"));
+});
+
+gulp.task("default", ["script", "style"]);
