@@ -21,6 +21,10 @@
     "event-stream": "^3",
     "vinyl-source-stream": "^1"
   },
+  "window": {
+    "title": "nwex Boilerplate",
+    "toolbar": false
+  },
   "browserify": {
     "insertGlobals": true
   },
