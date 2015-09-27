@@ -2,7 +2,7 @@
   "name": "nwex",
   "version": "0.0.1",
   "description": "NW.js + Express boilerplate",
-  "main": "index.html",
+  "main": "desktop.html",
   "scripts": {
     "test": "mocha",
     "desktop": "node_modules/nw/bin/nw ."
