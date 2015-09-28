@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "nw": "^0.12",
-    "express": "^4"
+    "express": "^4",
+    "passport": "^0.3",
+    "passport-google": "^0.3"
   },
   "devDependencies": {
     "browserify": "^11",
