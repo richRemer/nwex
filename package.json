@@ -21,7 +21,9 @@
     "gulp-sass": "^2",
     "gulp-sourcemaps": "^1",
     "event-stream": "^3",
-    "vinyl-source-stream": "^1"
+    "vinyl-source-stream": "^1",
+    "knockout-es5-option4": "^0.6",
+    "propertize": "^2"
   },
   "window": {
     "title": "nwex Boilerplate",
