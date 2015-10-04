@@ -11,6 +11,7 @@
     "nw": "^0.12",
     "express": "^4",
     "passport": "^0.3",
+    "jade": "^1",
     "passport-google-oauth": "^0.2",
     "cookie-session": "^1",
     "body-parser": "^1"

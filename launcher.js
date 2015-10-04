@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
 
         hostServer.on("started", function() {
-            var url = "http://" + this.host + ":" + this.port + "/";
+            var url = "http://" + this.host + ":" + this.port + "/home";
             window.location = url;
         });
 
