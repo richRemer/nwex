@@ -11,7 +11,9 @@
     "nw": "^0.12",
     "express": "^4",
     "passport": "^0.3",
-    "passport-google": "^0.3"
+    "passport-google-oauth": "^0.2",
+    "cookie-session": "^1",
+    "body-parser": "^1"
   },
   "devDependencies": {
     "browserify": "^11",
