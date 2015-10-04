@@ -3,6 +3,7 @@
 @import "reset";
 @import "metrics";
 @import "util";
+@import "google";
 
 body, select {
     font: $font-default;
@@ -43,7 +44,7 @@ button {
     color: $complement-x-light;
 }
 
-#server {
+#server, #login {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,4 +56,12 @@ button {
 
 #server-port {
     width: 4rem;
+}
+
+#login {
+    .providers {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
