@@ -12,9 +12,16 @@ document.addEventListener("DOMContentLoaded", function() {
         opts.host = this.host;
         opts.port = this.port;
         hostServer = new host.Server(opts);
+
         hostServer.on("state", function() {
             server.changeState(this.state);
         });
+
+        hostServer.on("started", function() {
+            var url = "http://" + this.host + ":" + this.port + "/";
+            window.location = url;
+        });
+
         hostServer.start();
     };
 
