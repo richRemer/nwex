@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function() {
         opts.port = this.port;
         hostServer = new host.Server(opts);
         hostServer.on("state", function() {
-console.log("host state changed");
             server.changeState(this.state);
         });
         hostServer.start();
