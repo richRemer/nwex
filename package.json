@@ -1,7 +1,7 @@
 {
   "name": "nwex",
   "version": "0.0.2",
-  "description": "NW.js + Express boilerplate",
+  "description": "ad-hoc server application framework",
   "main": "launcher.html",
   "scripts": {
     "test": "mocha",
