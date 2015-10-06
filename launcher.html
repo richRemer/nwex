@@ -6,19 +6,21 @@
         <link rel="stylesheet" type="text/css" href="build/style/nwex.css">
     </head>
     <body id="launcher">
-        <form>
-            <h3>Server</h3>
-            <fieldset>
-                <label for="server-host">Server</label>
-                <input id="server-host" type="text" data-bind="value:host">
+        <section>
+            <form>
+                <h3>Server</h3>
+                <fieldset>
+                    <label for="server-host">Server</label>
+                    <input id="server-host" type="text" data-bind="value:host">
 
-                <label for="server-port">Port</label>
-                <input id="server-port" type="text" data-bind="value:port">
-            </fieldset>
-            <fieldset>
-                <button type="button" data-bind="click:connect,enable:pending">Connect</button>
-                <button type="button" data-bind="click:start,enable:pending">Start</button>
-            </fieldset>
-        </form>
+                    <label for="server-port">Port</label>
+                    <input id="server-port" type="text" data-bind="value:port">
+                </fieldset>
+                <fieldset>
+                    <button type="button" data-bind="click:connect,enable:pending">Connect</button>
+                    <button type="button" data-bind="click:start,enable:pending">Start</button>
+                </fieldset>
+            </form>
+        </section>
     </body>
 </html>

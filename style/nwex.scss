@@ -22,21 +22,6 @@ body {
     background-color: $primary;
 }
 
-form {
-    background-color: $primary-x-light;
-    border: $border-thick solid $primary-x-dark;
-    border-radius: $rounded-full;
-    padding: $gutter-size;
-
-    h3 {
-        @include gutter-title();
-        background-color: $primary-x-dark;
-        color: $primary-x-light;
-        padding: $padding-light;
-        text-align: center;
-    }
-}
-
 button {
     background-color: $complement-dark;
     border: $border-regular solid $complement-x-dark;
@@ -44,10 +29,25 @@ button {
     color: $complement-x-light;
 }
 
-#launcher, #login {
+#launcher, #home, #login {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    > section {
+        background-color: $primary-x-light;
+        border: $border-thick solid $primary-x-dark;
+        border-radius: $rounded-full;
+        padding: $gutter-size;
+
+        h3 {
+            @include gutter-title();
+            background-color: $primary-x-dark;
+            color: $primary-x-light;
+            padding: $padding-light;
+            text-align: center;
+        }
+    }
 }
 
 #server-host {
@@ -58,10 +58,3 @@ button {
     width: 4rem;
 }
 
-#login {
-    .providers {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-}
