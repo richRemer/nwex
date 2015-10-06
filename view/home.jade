@@ -1,10 +1,9 @@
-doctype html
-html(lang="en")
-    head
-        title Welcome Home
-        script(src="script/home.bundle.js")
-        link(rel="stylesheet", type="text/css", href="/style/home.css")
-    body#home
-        section
-            h3 Connected
-            p Connected to application server
+extends layout
+
+block layout-opts
+    - var name = "home"
+    - var title = "nwex - Welcome Home"
+
+block content
+    h3 Connected
+    p Connected to application server

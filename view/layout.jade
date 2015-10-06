@@ -1,0 +1,15 @@
+doctype html
+block layout-opts
+    - var name = "nwex"
+    - var title = "nwex " + viewName
+html(lang="en")
+    head
+        block title
+            title #{title}
+        block scripts
+            script(src="script/"+name+".bundle.js")
+        block styles
+            link(rel="stylesheet", type="text/css", href="/style/"+name+".css")
+    body(id=name)
+        section
+            block content

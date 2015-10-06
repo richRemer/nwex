@@ -1,9 +1,9 @@
-doctype html
-html(lang="en")
-    head
-        title Login
-        link(rel="stylesheet", type="text/css", href="/style/login.css")
-    body#login
-        section
-            h3 Authentication Required
-            a.google(href="/auth/google")
+extends layout
+
+block layout-opts
+    - var name = "login"
+    - var title = "nwex - Who Are You?"
+
+block content
+    h3 Authentication Required
+    a.google(href="/auth/google")
