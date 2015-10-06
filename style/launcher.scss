@@ -1,0 +1,14 @@
+@import "nwex.scss";
+
+#launcher {
+    @extend .dialog-canvas;
+}
+
+#server-host {
+    width: 12rem;
+}
+
+#server-port {
+    width: 4rem;
+}
+
