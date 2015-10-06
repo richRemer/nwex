@@ -3,7 +3,6 @@
 @import "reset";
 @import "metrics";
 @import "util";
-@import "google";
 
 body, select {
     font: $font-default;
@@ -50,17 +49,5 @@ button {
             text-align: center;
         }
     }
-}
-
-#launcher, #home, #login {
-    @extend .dialog-canvas;
-}
-
-#server-host {
-    width: 12rem;
-}
-
-#server-port {
-    width: 4rem;
 }
 
