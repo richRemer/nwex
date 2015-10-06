@@ -25,5 +25,5 @@ document.addEventListener("DOMContentLoaded", function() {
         hostServer.start();
     };
 
-    ko.applyBindings(server, document.getElementById("server"));
+    ko.applyBindings(server, document.getElementById("launcher"));
 });
