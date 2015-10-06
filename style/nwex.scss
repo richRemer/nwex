@@ -29,7 +29,10 @@ button {
     color: $complement-x-light;
 }
 
-#launcher, #home, #login {
+/*
+ * extend to dispay single section child as dialog
+ */
+.dialog-canvas {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,12 +45,15 @@ button {
 
         h3 {
             @include gutter-title();
-            background-color: $primary-x-dark;
-            color: $primary-x-light;
+            color: $primary-x-dark;
             padding: $padding-light;
             text-align: center;
         }
     }
+}
+
+#launcher, #home, #login {
+    @extend .dialog-canvas;
 }
 
 #server-host {
