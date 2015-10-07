@@ -1,0 +1,14 @@
+extends ../layout
+
+append declares
+    - var setupName
+
+block options
+    - name = "setup"
+    - setupName = "Configure"
+    - title = "nwex - setup - " + setupName
+
+block content
+    h3 #{setupName}
+    block setup-content
+

@@ -1,0 +1,24 @@
+extends layout
+
+block options
+    - name = "setup"
+    - title = "nwex setup checklist"
+    - setupName = "Checklist"
+
+append scripts
+    script(src="/script/setup-checklist.bundle.js")
+
+block setup-content
+    ol(data-bind="foreach:{data:steps,as:'step'}")
+        li(data-bind="attr:{'class':step.id}, css:{done:step.complete}")
+            header
+                h4(data-bind="text:step.name")
+                h5(data-bind="text:step.description")
+            fieldset(data-bind="foreach:{data:step.fields,as:'field'}")
+                label(data-bind="text:field.name,attr:{for:field.id}")
+                input(type="text",data-bind="text:field.value,disable:step.complete,attr:{id:field.id}")
+            button(data-bind="click:step.save,disable:step.complete").
+                Configure
+            p(data-bind="text:step.info")
+    footer(data-bind="visible:complete")
+        a(href="/home") Take me to server homepage
