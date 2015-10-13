@@ -14,7 +14,8 @@
     "jade": "^1",
     "passport-google-oauth": "^0.2",
     "cookie-session": "^1",
-    "body-parser": "^1"
+    "body-parser": "^1",
+    "storage-interface": "0.0.6"
   },
   "devDependencies": {
     "browserify": "^11",
