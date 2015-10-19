@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", function() {
     var server = new TerminalServer(),
         checklist = {};
 
+    server.sync(true);
+
     checklist.steps = [];
     checklist.complete = false;
 
