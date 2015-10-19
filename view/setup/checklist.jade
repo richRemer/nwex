@@ -9,16 +9,36 @@ append scripts
     script(src="/script/setup-checklist.bundle.js")
 
 block setup-content
-    ol(data-bind="foreach:{data:steps,as:'step'}")
-        li(data-bind="attr:{'class':step.id}, css:{done:step.complete}")
+    ol
+        //- storage
+        li.storage(data-bind="css:{done:hasStorage}")
             header
-                h4(data-bind="text:step.name")
-                h5(data-bind="text:step.description")
-            fieldset(data-bind="foreach:{data:step.fields,as:'field'}")
-                label(data-bind="text:field.name,attr:{for:field.id}")
-                input(type="text",data-bind="text:field.value,disable:step.complete,attr:{id:field.id}")
-            button(data-bind="click:step.save,disable:step.complete").
-                Configure
-            p(data-bind="text:step.info")
-    footer(data-bind="visible:complete")
+                h4 Temporary Storage
+                h5 Enable temporary application storage
+            fieldset
+                button(data-bind="click:enableStorage") Enable
+            p.
+                Enable temporary storage.  Changes will not be saved between
+                server restarts.
+
+        //- authentication
+        li.auth(data-bind="css:{done:hasAuth}")
+            header
+                h4 Google OAuth2
+                h5 Configure Google OAuth2 authentication provider
+            fieldset
+                label(for="client-id") Client ID
+                input#client-id(type="text", data-bind="text:clientId")
+                label(for="client-secret") Client Secret
+                input#client-secret(type="text", data-bind="text:clientSecret")
+            fieldset
+                button(data-bind="click:configureAuth")
+
+        //- administrator
+        li.admin(data-bind="css:{done:hasAdmin}")
+            header
+                h4 Administrator
+                h5 Setup administrator account
+
+    footer(data-bind="visible:hasAdmin")
         a(href="/home") Take me to server homepage
